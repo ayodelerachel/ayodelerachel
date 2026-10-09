@@ -1,0 +1,122 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:K;src:url(fonts/KaushanScript.woff2)}
+@font-face{font-family:C;src:url(fonts/CaveatBrush.woff2)}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#2a160a}
+.t{position:absolute;left:0;right:0;text-align:center;font-family:K;color:#fff;
+ text-shadow:0 6px 0 rgba(40,18,4,.55),0 10px 30px rgba(0,0,0,.55),0 0 2px #000}
+</style></head><body>
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" style="position:absolute;inset:0">
+<defs>
+ <radialGradient id="wall" cx="50%" cy="58%" r="75%">
+  <stop offset="0" stop-color="#f6b45a"/><stop offset=".35" stop-color="#b5652a"/>
+  <stop offset=".7" stop-color="#5a2c12"/><stop offset="1" stop-color="#1e0d05"/></radialGradient>
+ <radialGradient id="doorlight" cx="50%" cy="45%" r="70%">
+  <stop offset="0" stop-color="#fffef6"/><stop offset=".3" stop-color="#fff3c2"/>
+  <stop offset=".7" stop-color="#ffd36b"/><stop offset="1" stop-color="#f3a63c"/></radialGradient>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffe9a8"/><stop offset=".55" stop-color="#fff8df"/><stop offset="1" stop-color="#ffd27a"/></linearGradient>
+ <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#8a4a1e"/><stop offset="1" stop-color="#1f0e05"/></linearGradient>
+ <linearGradient id="spill" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#fff2c4" stop-opacity=".95"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></linearGradient>
+ <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#3b1d0b"/><stop offset="1" stop-color="#6e3a17"/></linearGradient>
+ <linearGradient id="frame" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#4a250e"/><stop offset=".5" stop-color="#8d5124"/><stop offset="1" stop-color="#4a250e"/></linearGradient>
+ <radialGradient id="ray" cx="50%" cy="100%" r="100%"><stop offset="0" stop-color="#fff6d0" stop-opacity=".55"/><stop offset="1" stop-color="#fff6d0" stop-opacity="0"/></radialGradient>
+ <radialGradient id="vig" cx="50%" cy="55%" r="72%"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient>
+ <radialGradient id="bok" r="50%"><stop offset="0" stop-color="#fff1c0" stop-opacity=".9"/><stop offset=".6" stop-color="#ffd27a" stop-opacity=".35"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+ <filter id="b8"><feGaussianBlur stdDeviation="8"/></filter>
+ <filter id="b20"><feGaussianBlur stdDeviation="20"/></filter>
+ <filter id="b40"><feGaussianBlur stdDeviation="40"/></filter>
+ <clipPath id="arch"><path d="M330 1700 V1040 A210 210 0 0 1 750 1040 V1700 Z"/></clipPath>
+</defs>
+<rect width="1080" height="1920" fill="url(#wall)"/>
+<!-- wall panelling -->
+<g opacity=".18" stroke="#2a1306" stroke-width="6" fill="none">
+ <rect x="40" y="980" width="200" height="560" rx="6"/><rect x="840" y="980" width="200" height="560" rx="6"/></g>
+<!-- floor -->
+<path d="M0 1690 H1080 V1920 H0Z" fill="url(#floor)"/>
+<g stroke="#2a1306" stroke-opacity=".35" stroke-width="3">
+ <line x1="540" y1="1690" x2="-200" y2="1920"/><line x1="540" y1="1690" x2="200" y2="1920"/>
+ <line x1="540" y1="1690" x2="540" y2="1920"/><line x1="540" y1="1690" x2="880" y2="1920"/><line x1="540" y1="1690" x2="1280" y2="1920"/></g>
+<!-- door frame -->
+<path d="M300 1705 V1040 A240 240 0 0 1 780 1040 V1705 Z" fill="url(#frame)"/>
+<!-- outside world through door -->
+<g clip-path="url(#arch)">
+ <rect x="300" y="780" width="480" height="940" fill="url(#sky)"/>
+ <circle cx="540" cy="1250" r="150" fill="#fffef4" filter="url(#b40)"/>
+ <circle cx="540" cy="1250" r="70" fill="#fff"/>
+ <path d="M300 1330 Q420 1270 540 1310 T780 1290 V1720 H300Z" fill="#e9b45c" opacity=".55"/>
+ <path d="M300 1400 Q440 1350 560 1390 T780 1370 V1720 H300Z" fill="#c98f3e" opacity=".55"/>
+ <path d="M470 1720 L525 1400 L555 1400 L610 1720Z" fill="#fff6d8" opacity=".85"/>
+ <g fill="#9a6a2a" opacity=".45"><ellipse cx="360" cy="1380" rx="50" ry="80"/><ellipse cx="730" cy="1360" rx="45" ry="90"/></g>
+ <rect x="300" y="780" width="480" height="940" fill="url(#doorlight)" opacity=".55"/>
+</g>
+<!-- door leaf swung open -->
+<path d="M330 1700 V1040 Q330 900 420 860 L420 1600 Z" fill="url(#leaf)"/>
+<path d="M352 1080 L400 1050 L400 1300 L352 1320Z M352 1380 L400 1360 L400 1560 L352 1590Z" fill="#2a1306" opacity=".45"/>
+<circle cx="408" cy="1460" r="8" fill="#e7b552"/>
+<!-- light rays -->
+<g filter="url(#b20)" opacity=".9" style="mix-blend-mode:screen">
+ <path d="M540 1250 L-300 1920 L60 1920Z" fill="url(#ray)"/>
+ <path d="M540 1250 L250 1920 L470 1920Z" fill="url(#ray)"/>
+ <path d="M540 1250 L620 1920 L860 1920Z" fill="url(#ray)"/>
+ <path d="M540 1250 L1050 1920 L1400 1920Z" fill="url(#ray)"/>
+ <path d="M540 1250 L-200 700 L-200 1000Z" fill="url(#ray)" opacity=".5"/>
+ <path d="M540 1250 L1280 700 L1280 1000Z" fill="url(#ray)" opacity=".5"/>
+</g>
+<!-- light spill on floor -->
+<path d="M330 1700 H750 L1020 1920 H60Z" fill="url(#spill)" filter="url(#b8)"/>
+<!-- glow around door -->
+<path d="M330 1700 V1040 A210 210 0 0 1 750 1040 V1700 Z" fill="none" stroke="#fff4c8" stroke-width="18" opacity=".6" filter="url(#b20)"/>
+<!-- plants -->
+<g fill="#1c0f06">
+ <path d="M150 1700 l-30 -10 h120 l-30 10Z M90 1690 h120 l-15 -110 h-90Z"/>
+ <g transform="translate(150 1580)"><path d="M0 0 C-40 -80 -120 -120 -170 -110 C-110 -90 -60 -60 0 0Z"/><path d="M0 0 C-10 -110 -60 -200 -100 -230 C-70 -160 -40 -90 0 0Z"/><path d="M0 0 C20 -120 70 -190 120 -210 C80 -140 40 -70 0 0Z"/><path d="M0 0 C50 -60 120 -80 170 -60 C110 -50 60 -30 0 0Z"/><path d="M0 0 C0 -100 10 -200 -10 -280 C20 -200 20 -100 0 0Z"/></g>
+ <path d="M930 1700 l-30 -10 h120 l-30 10Z M870 1690 h120 l-15 -90 h-90Z"/>
+ <g transform="translate(930 1600)"><path d="M0 0 C40 -80 120 -110 170 -100 C110 -80 60 -50 0 0Z"/><path d="M0 0 C10 -110 60 -190 110 -220 C70 -150 40 -80 0 0Z"/><path d="M0 0 C-20 -110 -70 -180 -120 -200 C-80 -130 -40 -70 0 0Z"/><path d="M0 0 C-50 -50 -110 -60 -160 -40 C-100 -40 -50 -20 0 0Z"/></g>
+</g>
+<!-- woman silhouette, from behind, hands lifted -->
+<g transform="translate(540 1342) scale(.72)">
+ <g filter="url(#b20)" fill="#ffe9a6" opacity=".9">
+  <ellipse cx="0" cy="60" rx="70" ry="80"/><path d="M-120 150 L120 150 L170 520 L-170 520Z"/></g>
+ <g fill="#24120a">
+  <!-- arms -->
+  <path d="M-80 150 C-130 110 -175 40 -205 -40 L-232 -30 C-205 60 -160 140 -100 205Z"/>
+  <path d="M80 150 C130 110 175 40 205 -40 L232 -30 C205 60 160 140 100 205Z"/>
+  <ellipse cx="-218" cy="-55" rx="17" ry="30" transform="rotate(-25 -218 -55)"/>
+  <ellipse cx="218" cy="-55" rx="17" ry="30" transform="rotate(25 218 -55)"/>
+  <!-- body / dress -->
+  <path d="M-26 108 C-60 120 -95 130 -108 165 C-118 230 -112 290 -100 330 C-120 400 -150 470 -168 505 L168 505 C150 470 120 400 100 330 C112 290 118 230 108 165 C95 130 60 120 26 108Z"/>
+  <rect x="-22" y="80" width="44" height="40"/>
+  <!-- head + curly hair -->
+  <ellipse cx="0" cy="48" rx="50" ry="56"/>
+  <circle cx="0" cy="-22" r="34"/>
+  <g><circle cx="-34" cy="-30" r="14"/><circle cx="-14" cy="-50" r="15"/><circle cx="12" cy="-52" r="15"/><circle cx="34" cy="-34" r="14"/><circle cx="42" cy="-10" r="12"/><circle cx="-44" cy="-8" r="12"/>
+   <circle cx="-52" cy="30" r="13"/><circle cx="52" cy="30" r="13"/><circle cx="-50" cy="60" r="12"/><circle cx="50" cy="62" r="12"/><circle cx="-42" cy="90" r="11"/><circle cx="42" cy="92" r="11"/><circle cx="-58" cy="8" r="10"/><circle cx="58" cy="10" r="10"/></g>
+ </g>
+ <!-- shadow on floor -->
+ <ellipse cx="0" cy="505" rx="200" ry="22" fill="#24120a" opacity=".55" filter="url(#b8)"/>
+</g>
+<!-- bokeh / dust -->
+<g style="mix-blend-mode:screen">
+ <circle cx="140" cy="900" r="50" fill="url(#bok)"/><circle cx="930" cy="820" r="70" fill="url(#bok)"/>
+ <circle cx="230" cy="1150" r="30" fill="url(#bok)"/><circle cx="860" cy="1180" r="40" fill="url(#bok)"/>
+ <circle cx="700" cy="980" r="22" fill="url(#bok)"/><circle cx="380" cy="960" r="18" fill="url(#bok)"/>
+ <circle cx="1000" cy="1450" r="35" fill="url(#bok)"/><circle cx="70" cy="1380" r="28" fill="url(#bok)"/>
+ <g fill="#fff6d8"><circle cx="470" cy="1120" r="3"/><circle cx="610" cy="1060" r="2.5"/><circle cx="660" cy="1180" r="3"/><circle cx="420" cy="1250" r="2"/><circle cx="500" cy="990" r="2"/><circle cx="580" cy="1150" r="2"/></g>
+</g>
+<!-- top darkening for text legibility -->
+<rect width="1080" height="1920" fill="url(#vig)"/>
+<linearGradient id="top" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#140802" stop-opacity=".85"/><stop offset="1" stop-color="#140802" stop-opacity="0"/></linearGradient>
+<rect width="1080" height="900" fill="url(#top)"/>
+<!-- yellow brush underline + banner -->
+<path d="M130 618 C330 600 620 596 930 606 L928 622 C640 616 360 620 134 634Z" fill="#ffd21f"/>
+<path d="M70 690 C60 670 80 662 110 664 L960 650 C1000 650 1015 668 1005 690 L1012 790 C1015 812 995 820 965 818 L120 830 C85 832 64 818 72 796 L60 760 L78 740Z" fill="#ffd21f"/>
+<g fill="#ffd21f" opacity=".75"><rect x="40" y="700" width="40" height="6" rx="3"/><rect x="1000" y="770" width="45" height="7" rx="3"/><rect x="55" y="805" width="30" height="5" rx="2"/><rect x="990" y="665" width="35" height="5" rx="2"/></g>
+</svg>
+<div class="t" style="top:130px;font-size:140px;line-height:1;transform:rotate(-4deg)">Divine Direction</div>
+<div class="t" style="top:300px;font-size:178px;line-height:1.25;transform:rotate(-4deg)"><span style="color:#ffd21f">&amp;</span> Open Doors</div>
+<div class="t" style="top:696px;font-family:C;font-size:86px;white-space:nowrap;color:#14213d;text-shadow:none;transform:rotate(-1.5deg)">A Morning Prayer for Your Day</div>
+</body></html>
