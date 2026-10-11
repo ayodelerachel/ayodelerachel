@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Cinzel;src:url(fonts/cinzel-900.ttf);font-weight:900}
+@font-face{font-family:Corm;src:url(fonts/cormorant-it.ttf);font-style:italic;font-weight:600}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1280px;height:720px;overflow:hidden;background:#070a24}
+.c{position:relative;width:1280px;height:720px;overflow:hidden;
+ background:radial-gradient(ellipse 760px 620px at 930px 120px,#fff6dc 0%,#f3d9a0 9%,#9f8fd8 28%,#3b3a9a 52%,#141a55 75%,#070a24 100%)}
+.rays{position:absolute;left:930px;top:-80px;width:2400px;height:2400px;margin:-1200px 0 0 -1200px;
+ background:repeating-conic-gradient(from 90deg,rgba(255,248,225,.16) 0deg 3deg,transparent 3deg 11deg);
+ -webkit-mask:radial-gradient(circle,#000 0,#000 12%,transparent 42%);filter:blur(3px)}
+.cloud{position:absolute;border-radius:50%;filter:blur(28px)}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;box-shadow:0 0 6px #cfd8ff}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,10,36,.92) 0%,rgba(7,10,36,.7) 38%,rgba(7,10,36,0) 60%)}
+svg{position:absolute;left:0;top:0}
+.txt{position:absolute;left:64px;top:70px;width:640px;text-align:center}
+.sub{font-family:Corm;font-style:italic;font-weight:600;font-size:60px;line-height:1.08;color:#f4ecdb;
+ text-shadow:0 2px 12px rgba(0,0,0,.8)}
+.sub b{font-weight:600;color:#ffd98a}
+.orn{margin:22px auto 4px;width:420px;display:flex;align-items:center;gap:16px;color:#e9c77a;font-size:22px}
+.orn:before,.orn:after{content:"";flex:1;height:2px;background:linear-gradient(90deg,transparent,#e9c77a,transparent)}
+.big{font-family:Cinzel;font-weight:900;font-size:142px;line-height:1.05;letter-spacing:4px;
+ background:linear-gradient(180deg,#fffbea 0%,#ffe6a3 40%,#d9a441 100%);-webkit-background-clip:text;color:transparent;
+ filter:drop-shadow(0 3px 0 #3a2a10) drop-shadow(0 0 26px rgba(255,214,130,.65))}
+.cap{margin-top:14px;font-family:Cinzel;font-weight:900;font-size:24px;letter-spacing:7px;color:#cfd6ff;opacity:.92}
+</style></head><body><div class="c">
+<div class="rays"></div>
+<div class="cloud" style="left:620px;top:250px;width:520px;height:120px;background:rgba(214,200,255,.45)"></div>
+<div class="cloud" style="left:960px;top:200px;width:420px;height:110px;background:rgba(255,236,210,.5)"></div>
+<div class="cloud" style="left:760px;top:60px;width:340px;height:90px;background:rgba(255,250,235,.55)"></div>
+<div class="star" style="left:120px;top:40px"></div><div class="star" style="left:300px;top:24px"></div>
+<div class="star" style="left:520px;top:48px;width:2px;height:2px"></div><div class="star" style="left:40px;top:300px;width:2px;height:2px"></div>
+<div class="star" style="left:600px;top:150px;width:2px;height:2px"></div><div class="star" style="left:1220px;top:520px;width:2px;height:2px"></div>
+<div class="shade"></div>
+<svg width="1280" height="720" viewBox="0 0 1280 720">
+ <defs>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff4cf" stop-opacity=".95"/><stop offset=".4" stop-color="#ffd98a" stop-opacity=".45"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient>
+  <linearGradient id="cr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#ffe9b0"/><stop offset="1" stop-color="#e2b25a"/></linearGradient>
+  <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1d52"/><stop offset="1" stop-color="#05071a"/></linearGradient>
+  <filter id="b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+ </defs>
+ <ellipse cx="960" cy="330" rx="260" ry="260" fill="url(#glow)"/>
+ <path d="M0 720 L0 640 C220 610 420 650 620 600 C760 560 860 520 960 515 C1080 512 1180 560 1280 590 L1280 720 Z" fill="url(#hill)"/>
+ <path d="M620 600 C760 560 860 520 960 515 C1080 512 1180 560 1280 590" fill="none" stroke="#ffe0a0" stroke-opacity=".55" stroke-width="3" filter="url(#b)"/>
+ <g filter="url(#b)" opacity=".9"><rect x="944" y="160" width="32" height="360" fill="#ffe7a8"/><rect x="880" y="240" width="160" height="30" fill="#ffe7a8"/></g>
+ <rect x="946" y="162" width="28" height="356" rx="3" fill="url(#cr)"/>
+ <rect x="884" y="242" width="152" height="26" rx="3" fill="url(#cr)"/>
+</svg>
+<div class="txt">
+ <div class="sub">When you work hard<br>but still can't<br><b>make ends meet…</b></div>
+ <div class="orn">✦</div>
+ <div class="big">PRAY THIS</div>
+ <div class="cap">A PRAYER FOR PROVISION</div>
+</div>
+</div></body></html>
