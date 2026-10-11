@@ -1,0 +1,93 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Bebas;src:url(fonts/bebas.ttf)}
+@font-face{font-family:Kaushan;src:url(fonts/kaushan.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1280px;height:720px;overflow:hidden;background:#17213a}
+.c{position:relative;width:1280px;height:720px;overflow:hidden}
+svg{position:absolute;left:0;top:0}
+.txt{position:absolute;right:44px;top:22px;text-align:right}
+.h{font-family:Bebas;font-size:158px;line-height:.86;color:#fbf1e1;letter-spacing:1px;
+ text-shadow:0 4px 6px rgba(0,0,0,.55),0 10px 30px rgba(0,0,0,.45)}
+.brush{position:absolute;right:20px;top:428px;width:600px;height:150px}
+.script{position:absolute;right:70px;top:432px;font-family:Kaushan;font-size:104px;color:#16110c;transform:rotate(-3deg);
+ text-shadow:0 1px 0 rgba(255,240,200,.35)}
+</style></head><body><div class="c">
+<svg width="1280" height="720" viewBox="0 0 1280 720">
+<defs>
+ <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#16203a"/><stop offset=".45" stop-color="#25304a"/><stop offset=".75" stop-color="#6b4a3c"/><stop offset="1" stop-color="#b07a52"/></linearGradient>
+ <radialGradient id="warm" cx="22%" cy="85%" r="70%"><stop offset="0" stop-color="#ffcf8a" stop-opacity=".75"/><stop offset=".5" stop-color="#e09a5a" stop-opacity=".25"/><stop offset="1" stop-color="#e09a5a" stop-opacity="0"/></radialGradient>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#8fa6c4"/><stop offset=".35" stop-color="#e9c4b0"/><stop offset=".65" stop-color="#ffd9a0"/><stop offset="1" stop-color="#ffe7bf"/></linearGradient>
+ <radialGradient id="sun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fffdf2"/><stop offset=".18" stop-color="#fff3c8"/><stop offset=".45" stop-color="#ffd38a" stop-opacity=".6"/><stop offset="1" stop-color="#ffb860" stop-opacity="0"/></radialGradient>
+ <linearGradient id="curt" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#fff4e2" stop-opacity=".15"/><stop offset=".2" stop-color="#fff4e2" stop-opacity=".55"/><stop offset=".35" stop-color="#f3dcc0" stop-opacity=".3"/><stop offset=".55" stop-color="#fff4e2" stop-opacity=".6"/><stop offset=".75" stop-color="#e8cfb2" stop-opacity=".3"/><stop offset="1" stop-color="#fff4e2" stop-opacity=".5"/></linearGradient>
+ <linearGradient id="curtFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset=".5" stop-color="#fff" stop-opacity="1"/></linearGradient>
+ <mask id="cm"><rect width="1280" height="720" fill="url(#curtFade)"/></mask>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#b8862f"/><stop offset=".25" stop-color="#f3d58a"/><stop offset=".5" stop-color="#d2a548"/><stop offset=".75" stop-color="#f8e3a6"/><stop offset="1" stop-color="#a87526"/></linearGradient>
+ <filter id="rough" x="-10%" y="-30%" width="120%" height="160%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.02 0.25" numOctaves="3" seed="4"/>
+  <feDisplacementMap in="SourceGraphic" scale="34"/></filter>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9 0.04" numOctaves="2" seed="2"/><feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0 0.05  0 0 0 .55 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+ <filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+ <filter id="blur3"><feGaussianBlur stdDeviation="3"/></filter>
+ <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="curls" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="turbulence" baseFrequency="0.09" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="16"/></filter>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a2216"/><stop offset="1" stop-color="#1c110c"/></linearGradient>
+</defs>
+<!-- wall -->
+<rect width="1280" height="720" fill="url(#wall)"/>
+<rect width="1280" height="720" fill="url(#warm)"/>
+<!-- window -->
+<rect x="30" y="70" width="400" height="660" fill="url(#sky)"/>
+<g fill="#f7d8b8" opacity=".75" filter="url(#blur8)">
+ <ellipse cx="120" cy="250" rx="110" ry="18"/><ellipse cx="300" cy="200" rx="90" ry="14"/><ellipse cx="200" cy="330" rx="140" ry="16" fill="#f1c7a8"/></g>
+<path d="M30 560 C90 530 150 545 200 525 C260 505 320 530 430 515 L430 730 L30 730Z" fill="#d9a888" opacity=".55" filter="url(#blur3)"/>
+<path d="M30 610 C110 585 190 600 260 585 C330 570 380 590 430 580 L430 730 L30 730Z" fill="#c48c6c" opacity=".6" filter="url(#blur3)"/>
+<circle cx="190" cy="590" r="150" fill="url(#sun)"/>
+<g stroke="#fff3d4" stroke-opacity=".35" stroke-width="3" filter="url(#blur3)">
+ <line x1="190" y1="590" x2="560" y2="430"/><line x1="190" y1="590" x2="600" y2="560"/><line x1="190" y1="590" x2="520" y2="700"/></g>
+<!-- window frame -->
+<g fill="#efe2d0"><rect x="22" y="62" width="416" height="12"/><rect x="226" y="62" width="10" height="670"/><rect x="22" y="62" width="12" height="670"/><rect x="426" y="62" width="12" height="670"/></g>
+<!-- curtains -->
+<g mask="url(#cm)">
+ <path d="M0 40 L120 40 C110 250 140 450 95 720 L0 720Z" fill="url(#curt)"/>
+ <path d="M330 40 L520 40 L540 720 L390 720 C420 470 350 260 330 40Z" fill="url(#curt)"/>
+</g>
+<rect x="0" y="30" width="560" height="12" rx="6" fill="#3b2c22"/>
+<!-- praying silhouette, backlit -->
+<g transform="translate(-10,0)">
+ <g filter="url(#curls)" fill="#1a0f0b">
+  <circle cx="545" cy="395" r="92"/><circle cx="500" cy="360" r="58"/><circle cx="590" cy="455" r="70"/><circle cx="600" cy="360" r="60"/><circle cx="560" cy="310" r="48"/><circle cx="520" cy="470" r="40"/>
+ </g>
+ <path d="M500 352 C478 364 468 384 468 398 L458 416 C455 422 456 426 462 428 L466 430 L463 440 C462 446 466 448 468 450 L466 458 C465 465 470 470 476 470 L484 470 C486 482 490 492 500 496 C512 500 520 498 530 492 L540 520 L610 540 L560 440 Z" fill="url(#skin)"/>
+ <path d="M520 492 C530 520 536 540 540 560 C500 580 470 620 452 720 L720 720 C720 640 690 580 640 545 C610 530 580 520 560 480Z" fill="#1d1410"/>
+ <!-- hands -->
+ <path d="M520 600 C500 590 478 575 470 560 L500 540 C520 560 545 585 560 600Z" fill="#24160f"/>
+ <path d="M452 445 C440 470 438 505 448 540 C452 552 462 562 474 566 C488 566 496 556 498 540 C500 505 488 470 466 446 C462 440 456 440 452 445Z" fill="#2e1b12"/>
+ <path d="M520 600 C540 640 552 680 556 720 L470 720 C476 670 490 630 520 600Z" fill="#1d1410"/>
+ <path d="M452 445 C440 470 438 505 448 540" fill="none" stroke="#ffcf8a" stroke-width="2.5"/>
+ <path d="M459 447 C462 480 468 515 474 562" fill="none" stroke="#120a07" stroke-width="2"/>
+ <!-- rim light -->
+ <path d="M500 352 C478 364 468 384 468 398 L458 416 C455 422 456 426 462 428 L466 430 L463 440 C462 446 466 448 468 450 L466 458 C465 465 470 470 476 470 L484 470 C486 482 490 492 500 496" fill="none" stroke="#ffcf8a" stroke-width="2.5" stroke-opacity=".9"/>
+ <path d="M462 470 C458 452 460 436 466 430" fill="none" stroke="#ffcf8a" stroke-width="2.5"/>
+ <path d="M452 720 C470 620 500 580 540 560" fill="none" stroke="#ffb870" stroke-width="3" stroke-opacity=".6" filter="url(#blur3)"/>
+ </g>
+<!-- gold brush stroke -->
+<g filter="url(#rough)">
+ <path d="M690 450 L1270 438 L1268 570 L700 585 Z" fill="url(#gold)"/>
+ <path d="M660 470 L760 462 L740 520 L650 528Z" fill="url(#gold)" opacity=".85"/>
+</g>
+<g filter="url(#rough)"><path d="M690 450 L1270 438 L1268 570 L700 585 Z" fill="#fff" filter="url(#grain)"/></g>
+<!-- gold line icons -->
+<g filter="url(#glow)" fill="none" stroke="#ffd98a" stroke-width="4" stroke-linejoin="round">
+ <circle cx="760" cy="650" r="36"/><circle cx="760" cy="650" r="27" stroke-width="2"/>
+ <text x="760" y="664" text-anchor="middle" font-family="Bebas" font-size="38" fill="#ffd98a" stroke="none">$</text>
+ <path d="M852 612 L870 612 L870 630 L888 630 L888 646 L870 646 L870 690 L852 690 L852 646 L834 646 L834 630 L852 630Z"/>
+</g>
+<g fill="#fff3cf" filter="url(#glow)"><circle cx="812" cy="626" r="2.5"/><circle cx="905" cy="604" r="2"/><circle cx="720" cy="610" r="1.8"/><circle cx="815" cy="684" r="1.6"/></g>
+</svg>
+<div class="txt"><div class="h">Working Hard<br>But Still<br>Broke?</div></div>
+<div class="script">Pray This</div>
+</div></body></html>
