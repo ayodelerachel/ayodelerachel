@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Anton;src:url(fonts/anton.woff2)}
+@font-face{font-family:Mont;src:url(fonts/montserrat.woff2);font-weight:800}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1280px;height:720px;overflow:hidden;background:#07070f}
+.c{position:relative;width:1280px;height:720px;overflow:hidden;
+ background:radial-gradient(ellipse 900px 700px at 960px 250px,#ffcf5a 0%,#e08a1e 18%,#5a2a10 42%,#160c14 68%,#07070f 100%)}
+.rays{position:absolute;left:960px;top:250px;width:2600px;height:2600px;margin:-1300px 0 0 -1300px;
+ background:repeating-conic-gradient(from 0deg,rgba(255,236,170,.22) 0deg 5deg,transparent 5deg 15deg);
+ -webkit-mask:radial-gradient(circle,#000 0,#000 18%,transparent 52%);mask:radial-gradient(circle,#000 0,#000 18%,transparent 52%)}
+.vig{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,4,10,.96) 0%,rgba(4,4,10,.85) 36%,rgba(4,4,10,0) 62%)}
+.halo{position:absolute;left:1010px;top:330px;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;
+ background:radial-gradient(circle,rgba(255,250,220,1) 0%,rgba(255,220,120,.85) 30%,rgba(255,170,40,0) 70%)}
+.hands{position:absolute;left:1010px;top:345px;transform:translate(-50%,-50%);font-size:330px;line-height:1;
+ font-family:'Noto Color Emoji';filter:drop-shadow(0 0 40px rgba(255,210,100,.9)) drop-shadow(0 18px 30px rgba(0,0,0,.5))}
+.coin{position:absolute;font-family:'Noto Color Emoji';filter:drop-shadow(0 0 18px rgba(255,200,60,.9))}
+.tag{position:absolute;left:56px;top:48px;font-family:Mont;font-weight:800;font-size:28px;letter-spacing:2px;color:#111;
+ background:#ffd23f;padding:10px 22px;border-radius:8px;transform:rotate(-2deg);box-shadow:0 6px 0 #a87a00,0 10px 24px rgba(0,0,0,.6)}
+.t{position:absolute;left:52px;font-family:Anton;text-transform:uppercase;line-height:.95;color:#fff;
+ text-shadow:0 6px 0 #000,0 0 24px rgba(0,0,0,.9);-webkit-text-stroke:3px #000;paint-order:stroke fill}
+.l1{top:130px;font-size:118px}
+.l2{top:250px;font-size:118px}
+.broke{display:inline-block;background:#e0161e;color:#fff;padding:0 18px;transform:rotate(-3deg);margin-left:10px;
+ box-shadow:0 8px 0 #7a0005,0 12px 30px rgba(0,0,0,.6);-webkit-text-stroke:0;text-shadow:0 4px 0 #7a0005}
+.l3{top:415px;font-size:205px;line-height:1;color:#ffe066;letter-spacing:2px;
+ background:linear-gradient(180deg,#fff7c2 0%,#ffd84a 45%,#f0a10a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+ -webkit-text-stroke:0;text-shadow:none;filter:drop-shadow(0 0 2px #000) drop-shadow(5px 7px 0 #3a1c00) drop-shadow(0 0 28px rgba(255,190,40,.75))}
+.arrow{position:absolute;left:640px;top:470px;font-size:120px;font-family:Anton;color:#ffd23f;
+ filter:drop-shadow(4px 5px 0 #000)}
+.receipt{position:absolute;left:1080px;top:520px;transform:rotate(9deg);background:#fff;color:#c4121a;font-family:Anton;font-size:58px;
+ padding:6px 22px 10px;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.6);-webkit-text-stroke:0}
+.receipt small{display:block;font-family:Mont;font-size:16px;color:#333;letter-spacing:3px;text-align:center}
+.bottom{position:absolute;left:0;right:0;bottom:0;height:12px;background:linear-gradient(90deg,#ffd23f,#e0161e)}
+</style></head><body><div class="c">
+<div class="rays"></div><div class="vig"></div><div class="halo"></div>
+<div class="coin" style="left:770px;top:120px;font-size:64px;transform:rotate(-15deg)">🪙</div>
+<div class="coin" style="left:1130px;top:110px;font-size:80px;transform:rotate(12deg)">🪙</div>
+<div class="coin" style="left:1170px;top:380px;font-size:54px">🪙</div>
+<div class="coin" style="left:1180px;top:250px;font-size:46px;transform:rotate(20deg)">🪙</div>
+<div class="hands">🙏</div>
+<div class="receipt"><small>BALANCE</small>$0.00</div>
+<div class="tag">PRAYER FOR PROVISION</div>
+<div class="t l1">Working Hard</div>
+<div class="t l2">But Still <span class="broke">Broke?</span></div>
+<div class="t l3">Pray This</div>
+<div class="bottom"></div>
+</div></body></html>
